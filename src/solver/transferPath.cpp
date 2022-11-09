@@ -12,7 +12,7 @@ void TransferPathSolver::Insert(DiscInstance &inst, DiscItem &newItem) {
 
     // Replacement strategy. Higher => more likely to be removed
     std::vector<int> replacePrior(nItem);
-    // The position an item can be placed at. -1 if not exists
+    // One of the positions an item can be placed at. -1 if not exists
     std::vector<int> validPos(nItem, -1);
     // The index of the item a position is occupied by
     std::vector<int> color(inst.length, -1);
