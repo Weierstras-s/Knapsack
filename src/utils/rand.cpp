@@ -1,5 +1,6 @@
 #include "rand.h"
 
+#include <numeric>
 
 namespace Random {
     std::mt19937_64 &GetEngine() {

@@ -26,7 +26,7 @@ void TransferPathSolver::Insert(DiscInstance &inst, DiscItem &newItem) {
         }
     }
     std::vector<int> extendDist(inst.length + 1);
-    for (int i = inst.length; i >= 0; --i) {
+    for (int i = inst.length - 1; i >= 0; --i) {
         if (color[i] != -1) extendDist[i] = 0;
         else extendDist[i] = extendDist[i + 1] + 1;
     }

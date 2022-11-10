@@ -3,6 +3,7 @@
 #include "utils/rand.h"
 
 #include <list>
+#include <functional>
 
 std::vector<DiscItem> TestGen::Split() const {
     int len = (int)pLen.size();
