@@ -39,7 +39,7 @@ std::vector<DiscItem> TestGen::Split() const {
 std::vector<DiscItem> TestGen::GenItems() const {
     std::vector<DiscItem> ret = Split();
     for (auto &item: ret) {
-        int len = std::__lg(item.length);
+        int len = (int)std::log2(item.length);
         for (int num = cLen[len] - 1; num > 0; --num) {
             int x = Random::Next(0, (1 << (lgLen - len)) - 1);
             item.pos.insert(x << len);
